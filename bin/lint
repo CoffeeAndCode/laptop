@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+base_path="$(dirname "$(dirname "$0")")"
+
+shellcheck \
+  "$base_path/bin/lint" \
+  "$base_path/lib/utils.sh" \
+  "$base_path/mac.sh"
